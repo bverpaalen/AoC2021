@@ -2,7 +2,7 @@ import _io
 from typing import Callable
 
 
-def main(input_path = "input.txt"):
+def main(input_path: str = "input.txt"):
     input_file = open(input_path, 'r')
 
     bytes = read_bytes(input_file)
@@ -21,7 +21,7 @@ def main(input_path = "input.txt"):
     print(f"Life support rating: {life_sup_rat}")
 
 
-def bit_criteria(bytes: list, criteria: Callable[[list, int], int]) -> int:
+def bit_criteria(bytes: list, criteria: Callable[[list, int], str]) -> str:
     pos = 0
     while len(bytes) > 1:
         c_bit = criteria(bytes, pos)
