@@ -1,4 +1,4 @@
-# AoE2021
+# AoC2021
 https://adventofcode.com/2021
 
 |Day | Exercise | Status |
@@ -6,7 +6,7 @@ https://adventofcode.com/2021
 | 1  | Sonar Sweep | :star: :star: |
 | 2  | Dive! | :star: :star: |
 | 3  | Binary Diagnostic | :star: :star: |
-| 4  | ? | |
+| 4  | Giant Squid | :star: :star: |
 | 5  | ? | |
 | 6  | ? | |
 | 7  | ? | |
