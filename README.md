@@ -7,7 +7,7 @@ https://adventofcode.com/2021
 | 2  | Dive! | :star: :star: |
 | 3  | Binary Diagnostic | :star: :star: |
 | 4  | Giant Squid | :star: :star: |
-| 5  | ? | |
+| 5  | Hydrothermal Venture |:star: :star: |
 | 6  | ? | |
 | 7  | ? | |
 | 8  | ? | |
