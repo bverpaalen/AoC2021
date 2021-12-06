@@ -1,14 +1,13 @@
-import _io
-from typing import Callable
+from typing import Callable, TextIO
 
 
 def main(input_path: str = "input.txt"):
     input_file = open(input_path, 'r')
 
-    bytes = read_bytes(input_file)
+    bytes_list = read_bytes(input_file)
 
-    oxygen_gen_byte = bit_criteria(bytes, common_bit)
-    co2_scrub_byte = bit_criteria(bytes, uncommon_bit)
+    oxygen_gen_byte = bit_criteria(bytes_list, common_bit)
+    co2_scrub_byte = bit_criteria(bytes_list, uncommon_bit)
 
     oxygen_gen = int(oxygen_gen_byte, 2)
     co2_scrub = int(co2_scrub_byte, 2)
@@ -21,19 +20,19 @@ def main(input_path: str = "input.txt"):
     print(f"Life support rating: {life_sup_rat}")
 
 
-def bit_criteria(bytes: list, criteria: Callable[[list, int], str]) -> str:
+def bit_criteria(bytes_list: list, criteria: Callable[[list, int], str]) -> str:
     pos = 0
-    while len(bytes) > 1:
-        c_bit = criteria(bytes, pos)
+    while len(bytes_list) > 1:
+        c_bit = criteria(bytes_list, pos)
 
         new_bytes = []
-        for byte in bytes:
-            bit = (byte)[pos]
+        for byte in bytes_list:
+            bit = byte[pos]
             if bit == c_bit:
                 new_bytes.append(byte)
-        bytes = new_bytes
+        bytes_list = new_bytes
         pos += 1
-    return bytes[0]
+    return bytes_list[0]
 
 
 def bit_count(bytes_list: list, pos: int) -> dict:
@@ -60,15 +59,14 @@ def uncommon_bit(bytes_list: list, pos: int) -> str:
         return "1"
 
 
-def read_bytes(f: _io.TextIOWrapper) -> list:
-    bytes = []
+def read_bytes(f: TextIO) -> list:
+    list_bytes = []
     line = f.readline()
-    while(line):
-        bytes.append(line)
+    while line:
+        list_bytes.append(line)
         line = f.readline()
-    return bytes
+    return list_bytes
 
 
 if __name__ == '__main__':
     main()
-

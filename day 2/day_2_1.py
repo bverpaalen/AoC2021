@@ -8,7 +8,7 @@ hor = 0
 dep = 0
 
 line = input_file.readline()
-while(line):
+while line:
     direction, value = line.split(" ")
     if direction in change_dir.keys():
         dep += int(value) * change_dir[direction]

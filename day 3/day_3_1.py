@@ -4,7 +4,7 @@ input_file = open(input_path, 'r')
 
 byte = input_file.readline()
 pos_count = {}
-while(byte):
+while byte:
     for pos in range(len(byte)):
         bit = byte[pos]
 

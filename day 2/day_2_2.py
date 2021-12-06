@@ -9,7 +9,7 @@ dep = 0
 aim = 0
 
 line = input_file.readline()
-while(line):
+while line:
     direction, value = line.split(" ")
     if direction in change_dir.keys():
         aim += int(value) * change_dir[direction]

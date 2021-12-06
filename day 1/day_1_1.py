@@ -8,7 +8,7 @@ line_counter = 2
 previous_value = int(input_file.readline())
 new_value = input_file.readline()
 
-while(new_value):
+while new_value:
     new_value = int(new_value)
     if new_value > previous_value:
         increased_counter += 1

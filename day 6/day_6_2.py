@@ -3,7 +3,7 @@ from copy import deepcopy
 
 
 # Smarter method
-def main():
+def main() -> None:
     days = 256
     max_age = 8
     f = open("input.txt")
@@ -20,7 +20,7 @@ def main():
     print(f"Lanternfish: {shoal}")
 
 
-def loop(fish_counter, days, max_age):
+def loop(fish_counter: dict, days: int, max_age: int) -> int:
     n_fish_counter = {}
 
     for day in range(max_age + 1):

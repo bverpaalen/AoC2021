@@ -2,8 +2,8 @@ from typing import TextIO
 from lanternfish import Lanternfish
 
 
-# Bruteforce method
-def main():
+# Brute force method
+def main() -> None:
     days = 80
     f = open("input.txt")
     ages = read_file(f)
