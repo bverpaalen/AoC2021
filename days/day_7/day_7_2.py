@@ -2,8 +2,8 @@ from typing import TextIO
 import numpy as np
 
 
-def main() -> None:
-    input_file = open("input.txt")
+def main(input_path: str = "input.txt") -> None:
+    input_file = open(input_path)
     crabs_x = readfile(input_file)
 
     lowest_difference = np.inf
@@ -40,4 +40,5 @@ def calc_distance(crabs: list, x: int) -> int:
     return fuel
 
 
-main()
+if __name__ == '__main__':
+    main()
