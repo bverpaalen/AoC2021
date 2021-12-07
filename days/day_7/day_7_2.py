@@ -6,18 +6,7 @@ def main(input_path: str = "input.txt") -> None:
     input_file = open(input_path)
     crabs_x = readfile(input_file)
 
-    lowest_difference = np.inf
-    best_x = None
-
-    min_crab = min(crabs_x)
-    max_crab = max(crabs_x)
-
-    for x in range(min_crab, max_crab):
-        print(x)
-        fuel = calc_distance(crabs_x, x)
-        if fuel < lowest_difference:
-            lowest_difference = fuel
-            best_x = x
+    best_x, lowest_difference = brute_force_minimal_fuel(crabs_x)
 
     print()
     print(f"Horizontal line: {best_x}")
@@ -38,6 +27,21 @@ def calc_distance(crabs: list, x: int) -> int:
         difference = abs(x - crab)
         fuel += sum(range(1, int(difference)+1))
     return fuel
+
+
+def brute_force_minimal_fuel(crabs_x: list) -> (int, int):
+    lowest_difference = np.inf
+    best_x = None
+
+    min_crab = min(crabs_x)
+    max_crab = max(crabs_x)
+
+    for x in range(min_crab, max_crab):
+        fuel = calc_distance(crabs_x, x)
+        if fuel < lowest_difference:
+            lowest_difference = fuel
+            best_x = x
+    return best_x, lowest_difference
 
 
 if __name__ == '__main__':
