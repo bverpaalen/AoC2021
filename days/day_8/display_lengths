@@ -1,0 +1,12 @@
+{
+    "0": ["aaaa","bb","cc","ee","ff","gggg"],
+    "1": ["cc","ff"],
+    "2": ["aaaa","cc","dddd","ee","gggg"],
+    "3": ["aaaa", "cc", "dddd", "ff", "gggg"],
+    "4": ["bb","cc","dddd","ff"],
+    "5": ["aaaa","bb","dddd","ff","gggg"],
+    "6": ["aaaa","bb","dddd","ee","ff","gggg"],
+    "7": ["aaaa","cc","ff"],
+    "8": ["aaaa","bb","cc","dddd","ee","ff","gggg"],
+    "9": ["aaaa","bb","cc","dddd","ff","gggg"]
+}
