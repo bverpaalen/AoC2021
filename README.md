@@ -10,7 +10,7 @@ https://adventofcode.com/2021
 | 5  | Hydrothermal Venture |:star: :star: |
 | 6  | Lanternfish | :star: :star: |
 | 7  | The Treachery of Whales | :star: :star: |
-| 8  | ? | |
+| 8  | Seven Segment Search | :star: :star: |
 | 9  | ? | |
 | 10 | ? | |
 | 11 | ? | |
